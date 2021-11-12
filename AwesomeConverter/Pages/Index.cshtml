@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Miles to Meters";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Miles → meters</h1>
+    <form method="post">
+        <label for="lengthInMiles">Enter length in miles :</label>
+        <input type="number" id="lengthInMiles" name="lengthInMiles" value="@Model.LengthInMiles">
+        <input type="submit" />
+    </form>
+    @if (Model.LengthInMeters != null)
+    {
+        <label for="lengthInMeters">Length in meters: </label>
+        <input type="number" id="lengthInMeters" name="lengthInMeters" value="@Model.LengthInMeters" readonly="readonly">
+    }
+    
+
+</div>
